@@ -5,7 +5,7 @@ This repository contains automatically English translated FTB Quests configurati
 ### How to use:
 
 - Download the latest release from the releases page (or the one corresponding with your GTE2 version)
-- Replace the `ftbquests` folder from your Minecraft's instance `config` folder with the one from the archive
+- Drag and drop the `config` folder in your Minecraft instance folder
 - Greg out in (slightly broken?) English!
 
 ### Running the script
