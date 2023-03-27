@@ -10,7 +10,7 @@ This repository contains automatically English translated FTB Quests configurati
 
 ### Running the script
 
-For this you're going to need a [DeepL](https://www.deepl.com) account. The entirety of the questbook as of writing this is around ~120k Japanese characters, so it comfortably fits in the monthly DeepL free tier quota.
+For this you're going to need a [DeepL](https://www.deepl.com) account. The entirety of the questbook as of writing this is around ~120k characters, so it comfortably fits in the monthly DeepL free tier quota.
 ```
 $ mv /path/to/your/ftbutils .
 $ pip3 install -r requirements.txt
