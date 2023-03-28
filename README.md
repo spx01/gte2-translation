@@ -2,7 +2,7 @@
 
 This repository contains automatically English translated FTB Quests configurations for [\[GTCEu\] GregTech Expert 2](https://www.curseforge.com/minecraft/modpacks/gregtech-expert-2) made with DeepL. Also provides a simple automation script not specific to GTE2.
 
-### How to use:
+### How to use
 
 - Download the latest release from the releases page (or the one corresponding with your GTE2 version)
 - Drag and drop the `config` folder in your Minecraft instance folder
@@ -19,3 +19,7 @@ $ mv ftbutils-tl /path/to/your/ftbutils
 ```
 
 To update certain quests without having to re-translate everything (which takes quite a bit), simply delete them from the `ftbutils-tl` folder and run the script again.
+
+### Known issues
+
+- Translation *might* break formatting codes from within the contents of the quests
