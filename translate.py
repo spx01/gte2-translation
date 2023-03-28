@@ -38,7 +38,7 @@ def copy_structure(src, dst):
 def translate(s):
     # un-escape the string so that it doesnt confuse deepl
     res = s[1:-1].replace('\\"', '"')
-    res = tl.translate_text(res, source_lang="JA", target_lang="EN-US").text
+    res = tl.translate_text(res, source_lang="JA", target_lang="EN-US", preserve_formatting=True).text
     return '"' + res.replace('"', '\\"') + '"'
 
 
