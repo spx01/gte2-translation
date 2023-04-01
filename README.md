@@ -18,7 +18,7 @@ $ DEEPL_AUTH_KEY="<insert your deepl key here>" python3 translate.py
 $ mv ftbutils-tl /path/to/your/ftbutils
 ```
 
-To update certain quests without having to re-translate everything (which takes quite a bit), simply delete them from the `ftbutils-tl` folder and run the script again.
+To update certain quests without having to re-translate everything (which takes quite a bit), simply delete them from the `ftbutils-tl` folder and run the script again. You can use the provided `update.py` script for this, it checks for file differences between `./ftbquests` and `./ftbquests-new`, then deletes the corresponding translation from `./ftbquests-tl`. After doing that, you can just get rid of the old quests folder and rename the new one to `ftbquests`, then run the translation script.
 
 ### Known issues
 
