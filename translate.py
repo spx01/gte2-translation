@@ -30,7 +30,7 @@ def copy_structure(src, dst):
     for dirpath, dirnames, _ in os.walk(src):
         for d in dirnames:
             os.makedirs(
-                os.path.join(dst, os.path.join(*(dirpath.split(os.path.sep)[1:]), d)),
+                os.path.join(dst, *dirpath.split(os.path.sep)[1:], d),
                 exist_ok=True,
             )
 
@@ -38,7 +38,9 @@ def copy_structure(src, dst):
 def translate(s):
     # un-escape the string so that it doesnt confuse deepl
     res = s[1:-1].replace('\\"', '"')
-    res = tl.translate_text(res, source_lang="JA", target_lang="EN-US", preserve_formatting=True).text
+    res = tl.translate_text(
+        res, source_lang="JA", target_lang="EN-US", preserve_formatting=True
+    ).text
     return '"' + res.replace('"', '\\"') + '"'
 
 
@@ -50,7 +52,7 @@ def create_file_set(path, f=lambda s: s.endswith(".snbt")):
                 continue
             file = os.path.join(dirpath, filename)
             if os.path.isfile(file):
-                res.add(os.path.join(*(file.split(os.path.sep)[1:])))
+                res.add(os.path.join(*file.split(os.path.sep)[1:]))
     return res
 
 
