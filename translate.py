@@ -61,6 +61,9 @@ def main():
     ofiles = create_file_set(source_path)
     tlfiles = create_file_set(target_path)
     to_translate = ofiles - tlfiles
+    if not to_translate:
+        print("translation seems up to date")
+        return
     for fp in to_translate:
         with open(os.path.join(source_path, fp), "r") as f:
             s = f.read()
@@ -68,6 +71,7 @@ def main():
             translated = regex_replace(match_jap, s, translate)
             with open(os.path.join(target_path, fp), "x") as tf:
                 tf.write(translated)
+    print("done")
 
 
 main()
