@@ -17,9 +17,13 @@ def find_new_files(d, l=[]):
 def main():
     cmp = filecmp.dircmp(old_dir, update_dir)
     new_files = find_new_files(cmp)
-    print("the following files have been modified:")
-    for p in new_files:
-        print(f"\t{p}")
+    if new_files:
+        print("the following files have been modified:")
+        for p in new_files:
+            print(f"\t{p}")
+    else:
+        print("nothing to update")
+        return
 
     for p in new_files:
         tl_path = os.path.join(tl_dir, *p.split(os.path.sep)[1:])
